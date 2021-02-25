@@ -8,11 +8,13 @@ import { QuillModule } from 'ngx-quill';
 import { AppComponent } from './app.component';
 import { TextBlockComponent } from './text-block/text-block.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TextEditorComponent } from './text-editor/text-editor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TextBlockComponent
+    TextBlockComponent,
+    TextEditorComponent
   ],
   imports: [
     BrowserModule,
