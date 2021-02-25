@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TextEditorComponent implements OnInit {
 
   constructor() { }
-
+  //wow
   ngOnInit(): void {
   }
 
