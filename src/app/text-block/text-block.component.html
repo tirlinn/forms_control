@@ -1,5 +1,18 @@
-<div  class="col-sm-6" style="width: 90%; margin: 0">
-    <div style="height:100%">
-        <quill-editor [(ngModel)]="abs" [styles]="{height: '100px'}"></quill-editor>
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>Добавить параметры</h5>
+            <div class="ibox-tools">     
+            </div>    
+        <br>                            
+        <h5>№ п\п: 1. Название блока: </h5>
+            <div class="ibox-tools">                                        
+                <a class="dropdown-toggle" data-toggle="modal" onclick="edit_block(270);" data-target="#add_standart_contracts"><i class="fa fa-edit"></i></a>
+                <a onclick="deleteBlock(270);"><i class="fa fa-times"></i></a>                                                                                                                                                               
+            </div>
     </div>
+    
+    <div class="ibox-content">
+        <div id="blockContent"><p></p><div style="text-align: center; "><b><font face="Times New Roman">№&nbsp;</font><span class="meta" data-col="2" data-table="1" contenteditable="false">[РеестрДоговоров].[НомерДоговора]</span><font face="Times New Roman">&nbsp;/Серия ОСНС Қызметкерді еңбек (қызметтiк) мiндеттерiн атқарған кезінде </font></b><font face="Times New Roman"><b>оны жазатайым оқиғалардан мiндеттi сақтандыру&nbsp;</b><b>ШАРТЫ</b></font></div><div style="text-align: center; "><font face="Times New Roman"><b><br></b></font></div><span class="meta active" data-table="6" data-col="234" contenteditable="false">[СправочникРегионов].[ГородКаз]</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="meta" data-table="1" data-col="237" contenteditable="false">[РеестрДоговоров].[ДатаДоговораТекстНаКазахском]</span><br></div>
+    </div>
+                                
 </div>

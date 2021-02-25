@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-text-editor',
@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./text-editor.component.css']
 })
 export class TextEditorComponent implements OnInit {
-
+  @Input() content = "bhbjhbbjnj";
   constructor() { }
-  //wow
+  
   ngOnInit(): void {
-  }
 
+    //wow
+  }
+  
 }
