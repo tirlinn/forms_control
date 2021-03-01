@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { TextBlockComponent } from './text-block/text-block.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TextEditorComponent } from './text-editor/text-editor.component';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,10 @@ import { TextEditorComponent } from './text-editor/text-editor.component';
     AngularEditorModule,
     FormsModule,
     QuillModule.forRoot(),
-    NgbModule
+    NgbModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
