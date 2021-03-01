@@ -11,7 +11,6 @@ import { TextBlockComponent } from './text-block/text-block.component';
 import { TextEditorComponent } from './text-editor/text-editor.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
-import { MakoComponent } from './mako/mako.component';
 import { SingleBlockComponent } from './single-block/single-block.component';
 import { DoubleBlockComponent } from './double-block/double-block.component';
 import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
@@ -22,7 +21,6 @@ import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
     ClassComponent,
     TextBlockComponent,
     TextEditorComponent,
-    MakoComponent,
     SingleBlockComponent,
     DoubleBlockComponent
   ],
