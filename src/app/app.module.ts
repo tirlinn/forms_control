@@ -9,15 +9,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ClassComponent } from './class/class.component';
 import { TextBlockComponent } from './text-block/text-block.component';
 import { TextEditorComponent } from './text-editor/text-editor.component';
-<<<<<<< HEAD
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
-=======
 import { MakoComponent } from './mako/mako.component';
 import { SingleBlockComponent } from './single-block/single-block.component';
 import { DoubleBlockComponent } from './double-block/double-block.component';
-import { EditorModule } from '@tinymce/tinymce-angular';
->>>>>>> origin/Mako
+import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
 
 @NgModule({
   declarations: [
@@ -35,15 +32,14 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     FormsModule,
     QuillModule.forRoot(),
     NgbModule,
-<<<<<<< HEAD
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
-=======
+    ),
     EditorModule
->>>>>>> origin/Mako
   ],
-  providers: [],
+  providers: [
+    { provide: TINYMCE_SCRIPT_SRC, useValue: 'tinymce/tinymce.min.js' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
