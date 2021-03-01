@@ -6,7 +6,6 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./text-editor.component.css']
 })
 export class TextEditorComponent implements OnInit {
-  @Input() content = "bhbjhbbjnj";
   constructor() { }
   
   ngOnInit(): void {

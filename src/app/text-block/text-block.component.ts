@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-text-block',
+  selector: 'app-text-block-2',
   templateUrl: './text-block.component.html',
   styleUrls: ['./text-block.component.css']
 })

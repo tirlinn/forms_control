@@ -3,26 +3,34 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-import { AngularEditorModule } from '@kolkov/angular-editor';
 import { QuillModule } from 'ngx-quill';
 import { AppComponent } from './app.component';
-import { TextBlockComponent } from './text-block/text-block.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ClassComponent } from './class/class.component';
+import { TextBlockComponent } from './text-block/text-block.component';
 import { TextEditorComponent } from './text-editor/text-editor.component';
+import { MakoComponent } from './mako/mako.component';
+import { SingleBlockComponent } from './single-block/single-block.component';
+import { DoubleBlockComponent } from './double-block/double-block.component';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ClassComponent,
     TextBlockComponent,
-    TextEditorComponent
+    TextEditorComponent,
+    MakoComponent,
+    SingleBlockComponent,
+    DoubleBlockComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AngularEditorModule,
     FormsModule,
     QuillModule.forRoot(),
-    NgbModule
+    NgbModule,
+    EditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
