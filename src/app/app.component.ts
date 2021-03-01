@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
+<<<<<<< HEAD
 import { AngularEditorConfig } from '@kolkov/angular-editor';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+=======
+>>>>>>> origin/Mako
 
 @Component({
   selector: 'app-root',
@@ -11,6 +14,7 @@ export class AppComponent {
   closeResult = '';
   title = 'text-editor';
   content = "Wow";
+<<<<<<< HEAD
   editorConfig: AngularEditorConfig = {
     editable: true,
       spellcheck: true,
@@ -80,4 +84,6 @@ export class AppComponent {
     }
   }
 
+=======
+>>>>>>> origin/Mako
 }

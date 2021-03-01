@@ -2,3 +2,31 @@
 @import '~quill/dist/quill.core.css';
 @import '~quill/dist/quill.bubble.css';
 @import '~quill/dist/quill.snow.css';
+
+
+body {
+    background-color: #f3f3f4;
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.42857143;
+    height: 100%;
+    color: #676a6c;
+    padding-top: 50px;
+}
+
+.card { 
+background-color: white;
+width:100%;
+height: 223px;
+margin-top: 30px;
+}
+
+.col-sm-6 {
+padding-top: 30px;
+}
+
+.col {
+margin: 30px 30px 30px 30px;
+width: 100%;
+height: 100%;
+}
