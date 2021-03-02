@@ -5,13 +5,14 @@
 
 
 body {
-    background-color: #f3f3f4;
+    background-color: #D0D1E1;
     font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 13px;
     line-height: 1.42857143;
     height: 100%;
     color: #676a6c;
     padding-top: 50px;
+    font-family: "Lato", sans-serif;
 }
 
 .card { 
@@ -31,8 +32,48 @@ width: 100%;
 height: 100%;
 }
 
-.mod {
-    width: 100%;
-    justify-content: center;
-    display: flex;
+.modal.show .modal-dialog {
+    width: 60% !important;
+    max-width: 80%;
 }
+
+.btn {
+    /* color: #a5d4dc !important;
+    background-color: #a5d4dc !important; */
+}
+/* navbar */
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #908DB9;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #CFD1DA;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #EBECEF;
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
