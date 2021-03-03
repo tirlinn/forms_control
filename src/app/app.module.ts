@@ -15,6 +15,7 @@ import { SingleBlockComponent } from './single-block/single-block.component';
 import { DoubleBlockComponent } from './double-block/double-block.component';
 import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SelectComponent } from './select/select.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     TextEditorComponent,
     SingleBlockComponent,
     DoubleBlockComponent,
-    NavbarComponent
+    NavbarComponent,
+    SelectComponent
   ],
   imports: [
     BrowserModule,
