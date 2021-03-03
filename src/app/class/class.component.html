@@ -1,4 +1,7 @@
-<div class="container">
-    <app-double-block></app-double-block>
-    <app-single-block></app-single-block>
+<div class="container" >
+    <app-navbar></app-navbar>
+    <button type="button" class="btn btn-primary btn-lg" (click)="myFunc()">button</button>
+    <button type="button" class="btn btn-primary btn-lg" (click)="myFunc2()">button</button>
+    <app-double-block *ngFor="let item of arr"></app-double-block>
+    <app-single-block *ngFor="let item of arr"></app-single-block>
 </div>

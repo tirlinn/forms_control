@@ -14,6 +14,8 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { SingleBlockComponent } from './single-block/single-block.component';
 import { DoubleBlockComponent } from './double-block/double-block.component';
 import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SelectComponent } from './select/select.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { EditorModule, TINYMCE_SCRIPT_SRC } from '@tinymce/tinymce-angular';
     TextBlockComponent,
     TextEditorComponent,
     SingleBlockComponent,
-    DoubleBlockComponent
+    DoubleBlockComponent,
+    NavbarComponent,
+    SelectComponent
   ],
   imports: [
     BrowserModule,
