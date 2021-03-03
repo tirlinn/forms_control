@@ -1,5 +1,17 @@
-<div class="container">
-    <editor
+
+
+<button class="btn btn-lg btn-outline-primary float-right" (click)="open(content)">Edit</button>
+<ng-template #content let-modal>
+  <div class="modal-header mod">
+    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="container">
+        <editor
+        [(ngModel)]="text"
         [init]="{
         base_url: '/tinymce',
         suffix: '.min',
@@ -15,5 +27,10 @@
             alignleft aligncenter alignright alignjustify | \
             bullist numlist outdent indent | removeformat | help'
         }"
-    ></editor>
-</div>
+        ></editor>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="newText()">Save</button>
+  </div>
+</ng-template>
