@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Block } from '../block';
 
 @Component({
   selector: 'app-single-block',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./single-block.component.css']
 })
 export class SingleBlockComponent implements OnInit {
-
+  @Input() id: number;
   constructor() { }
 
   ngOnInit(): void {

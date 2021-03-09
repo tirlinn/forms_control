@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-double-block',
@@ -6,10 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./double-block.component.css']
 })
 export class DoubleBlockComponent implements OnInit {
-
+  @Input() id: number;
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { Block } from '../block';
+import { BlockService } from '../block.service';
 
 @Component({
   selector: 'app-text-editor',
@@ -7,11 +9,13 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./text-editor.component.css']
 })
 export class TextEditorComponent implements OnInit {
-  @Input() text: any;
-  @Input() saveText = new EventEmitter<any>();
-  @Output() textChange = new EventEmitter<any>();
+  block: Block;
+
+  @Input() id: number;
+  @Input() num: number;
   constructor(
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private blockService: BlockService,
   ) { }
 
   closeResult = '';
@@ -35,10 +39,14 @@ export class TextEditorComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getHero();
   }
 
-  newText() {
-    this.textChange.emit(this.text);
+  getHero(): void {
+    this.blockService.getBlock(this.id).subscribe(block => this.block = block);
   }
-  
+
+  saveText() {
+    this.blockService.updateBlock(this.block).subscribe();
+  }
 }

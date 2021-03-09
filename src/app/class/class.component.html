@@ -1,7 +1,16 @@
 <div class="container" >
     <app-navbar></app-navbar>
-    <button type="button" class="btn btn-primary btn-lg" (click)="myFunc()">button</button>
-    <button type="button" class="btn btn-primary btn-lg" (click)="myFunc2()">button</button>
-    <app-double-block *ngFor="let item of arr"></app-double-block>
-    <app-single-block *ngFor="let item of arr"></app-single-block>
+    <button type="button" class="btn btn-primary btn-lg" (click)="toggleAddBlock()">button</button>
+    <div class="container row" *ngIf="addBlock">
+        <button type="button" class="btn btn-secondary btn-sm" (click)="addSingleBlock(0)">Add single block</button>
+        <button type="button" class="btn btn-secondary btn-sm" (click)="addDoubleBlock(0)">Add double block</button>
+    </div>
+    <div *ngFor="let item of blocks; index as i">
+        <app-single-block *ngIf="item.type==1" [id]="item.id"></app-single-block>
+        <app-double-block *ngIf="item.type==2" [id]="item.id"></app-double-block>
+        <div class="container row" *ngIf="addBlock">
+            <button type="button" class="btn btn-secondary btn-sm" (click)="addSingleBlock(i + 1)">Add single block</button>
+            <button type="button" class="btn btn-secondary btn-sm" (click)="addDoubleBlock(i + 1)">Add double block</button>
+        </div>
+    </div>
 </div>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Block } from '../block';
+import { BlockService } from '../block.service';
 
 @Component({
   selector: 'app-class',
@@ -6,22 +8,41 @@ import { Component } from '@angular/core';
   styleUrls: ['./class.component.css']
 })
 export class ClassComponent {
-  arr=[1];
-  title = 'text-editor';
-  content = "Wow";
+  blocks: Block[] = [];
+  addBlock: boolean = false;
 
-  classFunc(){}
+  constructor(
+    private blockService: BlockService,
+  ) {}
 
-  myFunc() {
-    let arr = Math.max(...this.arr) + 1;
-    this.arr.push(arr);
-    console.log(`New number added ${arr}`);
-    console.log(this.arr);
+  ngOnInit() {
+    this.getBlocks();
+    console.log(this.blocks);
   }
-  myFunc2() {
-    let arr = Math.max(...this.arr) + 1;
-    this.arr.push(arr);
-    console.log(`New number added ${arr}`);
-    console.log(this.arr);
+
+  getBlocks(): void {
+    console.log(this.blockService.getBlocks());
+    this.blockService.getBlocks()
+      .subscribe(blocks => this.blocks = blocks);
+  }
+
+  toggleAddBlock() {
+    this.addBlock = !this.addBlock;
+  }
+
+  addSingleBlock(index) {
+    let tmp = 1;
+    // this.blocks.splice(index, 0, tmp);
+    this.toggleAddBlock();
+    console.log(`New number added ${tmp}`);
+    console.log(this.blocks);
+  }
+  
+  addDoubleBlock(index) {
+    let tmp = 2;
+    // this.blocks.splice(index, 0, tmp);
+    this.toggleAddBlock();
+    console.log(`New number added ${tmp}`);
+    console.log(this.blocks);
   }
 }
